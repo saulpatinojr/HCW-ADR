@@ -32,7 +32,7 @@ Naming follows `ADR-[P][DD][SSS]`:
 | Segment | Meaning | Values |
 |---|---|---|
 | `P` | Cloud provider | `1` = AWS, `2` = Azure, `3` = GCP |
-| `DD` | Discipline | `01` = Operations, `02` = Reliability, `03` = FinOps, `04` = Security, `05` = Networking, `06` = Governance |
+| `DD` | Discipline | `01` = Operations, `02` = Reliability, `03` = FinOps, `04` = Security, `05` = Networking, `06` = Compute, `07` = Application, `08` = Governance |
 | `SSS` | Sequence | Zero-padded sequence within provider and discipline |
 
 Examples:
