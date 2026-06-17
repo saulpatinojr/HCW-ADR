@@ -47,7 +47,7 @@ All new ADRs must follow the standard template:
 
 ## Cloud Provider Libraries
 
-| Provider | Wiki |
+| Provider | Wiki Landing Page |
 |---|---|
 | ☁️ Microsoft Azure | [Microsoft Azure](../../wiki/Microsoft-Azure) |
 | ☁️ Amazon Web Services | [Amazon Web Services](../../wiki/Amazon-Web-Services) |
