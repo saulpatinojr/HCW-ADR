@@ -19,6 +19,24 @@ This repository is the entry point for the HCW ADR library. The ADR catalog itse
 
 An Architecture Decision Record captures a significant technical decision, the context behind it, and the consequences that follow from it. Accepted ADRs are preserved as historical records and superseded by newer ADRs instead of being rewritten in place.
 
+## When ADRs Compete
+
+If two ADRs describe competing directions, do not keep both as if they are equally current.
+
+The resolution process is:
+
+1. Review the competing ADRs against the implemented architecture and current best practices.
+2. Keep the ADR that is still aligned with the target architecture as the active decision.
+3. Mark the stale ADR as `Superseded` rather than deleting it.
+4. Update the newer ADR with an appendix that records:
+   - the timestamp of the update
+   - which prior ADR it improves or replaces
+   - what changed
+   - why the newer direction is now preferred
+5. Update the wiki landing page status if the superseded ADR is listed there.
+
+This keeps the decision trail intact while making the current direction unambiguous.
+
 ## Library Structure
 
 ADRs are tiered the same way across the wiki:
