@@ -1,60 +1,46 @@
 # HCW Architecture Decision Records
 
-> **Mission:** Establish a living, version-controlled library of Architecture Decision Records (ADRs) that capture the *context*, *rationale*, and *consequences* of every significant architectural choice made across Hybrid Cloud Workloads (HCW). These records serve as the authoritative source of truth for engineering teams, auditors, and future architects navigating our cloud infrastructure.
+This repository is the entry point for the HCW ADR library. The ADR catalog itself is maintained in the GitHub wiki and organized as provider-specific landing pages with discipline-level grouping beneath each provider.
 
----
+## Start Here
 
-## What is an ADR?
+- [Wiki Home](https://github.com/saulpatinojr/HCW-ADR/wiki)
+- [ADR Template](https://github.com/saulpatinojr/HCW-ADR/wiki/ADR-Template)
 
-An **Architecture Decision Record** is a short document that captures an important architectural decision made along with its context and consequences. ADRs are *immutable by default* — once accepted, they are superseded by new ADRs rather than edited in place. This preserves the historical record of *why* decisions were made at a given point in time.
+## Provider Landing Pages
 
-Each ADR answers three core questions:
-
-1. **What** decision was made?
-2. **Why** was it made (drivers, constraints, alternatives considered)?
-3. **What** are the consequences (trade-offs, follow-on actions)?
-
----
-
-## Naming Convention
-
-All ADRs follow this naming pattern:
-
-```
-ADR-[P][DD][SSS]
-```
-
-| Segment | Length | Values |
+| Provider | Wiki Landing Page | Current State |
 |---|---|---|
-| **P** — Cloud Provider | 1 digit | `1` = AWS · `2` = Azure · `3` = GCP |
-| **DD** — Discipline | 2 digits | `01` = Operations · `02` = Reliability (DR/BC) · `03` = FinOps/Cost · `04` = Security · `05` = Networking |
-| **SSS** — Sequence | 3 digits | Zero-padded sequence within that provider + discipline |
+| Microsoft Azure | [Microsoft Azure](https://github.com/saulpatinojr/HCW-ADR/wiki/Microsoft-Azure) | Active library |
+| Amazon Web Services | [Amazon Web Services](https://github.com/saulpatinojr/HCW-ADR/wiki/Amazon-Web-Services) | Placeholder |
+| Google Cloud Platform | [Google Cloud Platform](https://github.com/saulpatinojr/HCW-ADR/wiki/Google-Cloud-Platform) | Placeholder |
 
-**Examples:**
-- `ADR-205001` → Azure (`2`) · Networking (`05`) · First record (`001`)
-- `ADR-104003` → AWS (`1`) · Security (`04`) · Third record (`003`)
-- `ADR-302001` → GCP (`3`) · Reliability (`02`) · First record (`001`)
+## What Is an ADR?
 
----
+An Architecture Decision Record captures a significant technical decision, the context behind it, and the consequences that follow from it. Accepted ADRs are preserved as historical records and superseded by newer ADRs instead of being rewritten in place.
 
-## ADR Template
+## Library Structure
 
-All new ADRs must follow the standard template:
+ADRs are tiered the same way across the wiki:
 
-→ [ADR Template](https://github.com/saulpatinojr/HCW-ADR/wiki/ADR-Template)
+1. Provider landing page
+2. Discipline section within that provider
+3. Individual ADR page
 
----
+Naming follows `ADR-[P][DD][SSS]`:
 
-## Cloud Provider Libraries
-
-| Provider | Wiki Landing Page | Status |
+| Segment | Meaning | Values |
 |---|---|---|
-| ☁️ Microsoft Azure | [Microsoft Azure](https://github.com/saulpatinojr/HCW-ADR/wiki/Microsoft-Azure) | 🟢 10 ADRs |
-| ☁️ Amazon Web Services | [Amazon Web Services](https://github.com/saulpatinojr/HCW-ADR/wiki/Amazon-Web-Services) | 🟡 Placeholder |
-| ☁️ Google Cloud Platform | [Google Cloud Platform](https://github.com/saulpatinojr/HCW-ADR/wiki/Google-Cloud-Platform) | 🟡 Placeholder |
+| `P` | Cloud provider | `1` = AWS, `2` = Azure, `3` = GCP |
+| `DD` | Discipline | `01` = Operations, `02` = Reliability, `03` = FinOps, `04` = Security, `05` = Networking |
+| `SSS` | Sequence | Zero-padded sequence within provider and discipline |
 
----
+Examples:
 
-## Full Wiki
+- `ADR-205001` = Azure, Networking, first record
+- `ADR-104003` = AWS, Security, third record
+- `ADR-302001` = GCP, Reliability, first record
 
-→ [Browse all ADRs on the Wiki](https://github.com/saulpatinojr/HCW-ADR/wiki)
+## Purpose
+
+The repository is the front door. The wiki is the structured ADR library.
