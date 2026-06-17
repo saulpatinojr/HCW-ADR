@@ -1,26 +1,46 @@
-# HCW Architecture Decision Records — Wiki
+# HCW Architecture Decision Records — Wiki Home
 
-Welcome to the HCW ADR Wiki. This is the living reference library for all Architecture Decision Records across Hybrid Cloud Workloads.
+Welcome to the HCW ADR library. This wiki is the authoritative source of truth for all architectural decisions made across Hybrid Cloud Workloads (HCW).
 
-Use the navigation below to explore records by cloud provider, or start with the [ADR Template](ADR-Template) to contribute a new record.
+ADRs are organized by **cloud provider** and **discipline**. Each record captures the context, decision, rationale, and consequences of a significant architectural choice.
 
 ---
 
-## Cloud Provider Libraries
+## 📖 Start Here
 
-| Provider | Landing Page |
+- [What is an ADR & Naming Convention](https://github.com/saulpatinojr/HCW-ADR#what-is-an-adr) — back to the main repo README
+- [ADR Template](https://github.com/saulpatinojr/HCW-ADR/wiki/ADR-Template) — use this for all new records
+
+---
+
+## ☁️ Cloud Provider Libraries
+
+| Provider | Landing Page | Records |
+|---|---|---|
+| Microsoft Azure | [→ Azure Library](https://github.com/saulpatinojr/HCW-ADR/wiki/Microsoft-Azure) | 10 ADRs |
+| Amazon Web Services | [→ AWS Library](https://github.com/saulpatinojr/HCW-ADR/wiki/Amazon-Web-Services) | Coming soon |
+| Google Cloud Platform | [→ GCP Library](https://github.com/saulpatinojr/HCW-ADR/wiki/Google-Cloud-Platform) | Coming soon |
+
+---
+
+## 🗂️ All Azure ADRs — Quick Reference
+
+### Security (04)
+
+| ADR | Title |
 |---|---|
-| ☁️ Microsoft Azure | [[Microsoft Azure]] |
-| ☁️ Amazon Web Services | [[Amazon Web Services]] |
-| ☁️ Google Cloud Platform | [[Google Cloud Platform]] |
+| [ADR-204001](https://github.com/saulpatinojr/HCW-ADR/wiki/ADR-204001) | GitHub PATs and Tokens Management |
+| [ADR-204002](https://github.com/saulpatinojr/HCW-ADR/wiki/ADR-204002) | GitHub and Azure Bootstrap Secret Variable Flow |
+| [ADR-204003](https://github.com/saulpatinojr/HCW-ADR/wiki/ADR-204003) | Enterprise App Identity and Authentication Flow |
 
----
+### Networking (05)
 
-## About This Library
-
-Each ADR follows the naming convention `ADR-[P][DD][SSS]` where:
-- **P** = Provider (1=AWS, 2=Azure, 3=GCP)
-- **DD** = Discipline (01=Operations, 02=Reliability, 03=FinOps, 04=Security, 05=Networking)
-- **SSS** = Zero-padded sequence number
-
-See the [main repository README](https://github.com/saulpatinojr/HCW-ADR) for the full naming convention reference.
+| ADR | Title |
+|---|---|
+| [ADR-205001](https://github.com/saulpatinojr/HCW-ADR/wiki/ADR-205001) | Private PaaS Connectivity and DNS |
+| [ADR-205002](https://github.com/saulpatinojr/HCW-ADR/wiki/ADR-205002) | Container Apps Workload Profile for Private Origin |
+| [ADR-205003](https://github.com/saulpatinojr/HCW-ADR/wiki/ADR-205003) | Private Endpoint Approval Automation |
+| [ADR-205004](https://github.com/saulpatinojr/HCW-ADR/wiki/ADR-205004) | Virtual Network Flow Logs |
+| [ADR-205005](https://github.com/saulpatinojr/HCW-ADR/wiki/ADR-205005) | Edge Ingress and Origin Protection |
+| [ADR-205006](https://github.com/saulpatinojr/HCW-ADR/wiki/ADR-205006) | East-West Network Segmentation |
+| [ADR-205007](https://github.com/saulpatinojr/HCW-ADR/wiki/ADR-205007) | North-South Egress Inspection |

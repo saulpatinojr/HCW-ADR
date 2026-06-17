@@ -41,14 +41,20 @@ ADR-[P][DD][SSS]
 
 All new ADRs must follow the standard template:
 
-→ [ADR Template](../../wiki/ADR-Template)
+→ [ADR Template](https://github.com/saulpatinojr/HCW-ADR/wiki/ADR-Template)
 
 ---
 
 ## Cloud Provider Libraries
 
-| Provider | Wiki Landing Page |
-|---|---|
-| ☁️ Microsoft Azure | [Microsoft Azure](../../wiki/Microsoft-Azure) |
-| ☁️ Amazon Web Services | [Amazon Web Services](../../wiki/Amazon-Web-Services) |
-| ☁️ Google Cloud Platform | [Google Cloud Platform](../../wiki/Google-Cloud-Platform) |
+| Provider | Wiki Landing Page | Status |
+|---|---|---|
+| ☁️ Microsoft Azure | [Microsoft Azure](https://github.com/saulpatinojr/HCW-ADR/wiki/Microsoft-Azure) | 🟢 10 ADRs |
+| ☁️ Amazon Web Services | [Amazon Web Services](https://github.com/saulpatinojr/HCW-ADR/wiki/Amazon-Web-Services) | 🟡 Placeholder |
+| ☁️ Google Cloud Platform | [Google Cloud Platform](https://github.com/saulpatinojr/HCW-ADR/wiki/Google-Cloud-Platform) | 🟡 Placeholder |
+
+---
+
+## Full Wiki
+
+→ [Browse all ADRs on the Wiki](https://github.com/saulpatinojr/HCW-ADR/wiki)
