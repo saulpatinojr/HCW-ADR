@@ -6,6 +6,8 @@ This repository is the entry point for the HCW ADR library. The ADR catalog itse
 
 - [Wiki Home](https://github.com/saulpatinojr/HCW-ADR/wiki)
 - [ADR Template](https://github.com/saulpatinojr/HCW-ADR/wiki/ADR-Template)
+- [ADR Creation Runbook](https://github.com/saulpatinojr/HCW-ADR/wiki/ADR-Creation-Runbook)
+- [Local ADR Creation Runbook](./ADR-Creation-Runbook.md)
 
 ## Provider Landing Pages
 
@@ -14,6 +16,8 @@ This repository is the entry point for the HCW ADR library. The ADR catalog itse
 | Microsoft Azure | [Microsoft Azure](https://github.com/saulpatinojr/HCW-ADR/wiki/Microsoft-Azure) | Active library |
 | Amazon Web Services | [Amazon Web Services](https://github.com/saulpatinojr/HCW-ADR/wiki/Amazon-Web-Services) | Placeholder |
 | Google Cloud Platform | [Google Cloud Platform](https://github.com/saulpatinojr/HCW-ADR/wiki/Google-Cloud-Platform) | Placeholder |
+| GitHub | [GitHub](https://github.com/saulpatinojr/HCW-ADR/wiki/GitHub) | Active library |
+| Cross-Platform | [Cross-Platform](https://github.com/saulpatinojr/HCW-ADR/wiki/Cross-Platform) | Active library |
 
 ## What Is an ADR?
 
@@ -49,7 +53,7 @@ Naming follows `ADR-[P][DD][SSS]`:
 
 | Segment | Meaning | Values |
 |---|---|---|
-| `P` | Cloud provider | `1` = AWS, `2` = Azure, `3` = GCP |
+| `P` | Provider or catalog area | `1` = AWS, `2` = Azure, `3` = GCP, `4` = GitHub, `9` = Cross-Platform |
 | `DD` | Discipline | `01` = Operations, `02` = Reliability, `03` = FinOps, `04` = Security, `05` = Networking, `06` = Compute, `07` = Application, `08` = Governance, `09` = Tools |
 | `SSS` | Sequence | Zero-padded sequence within provider and discipline |
 
@@ -59,7 +63,9 @@ Examples:
 - `ADR-104003` = AWS, Security, third record
 - `ADR-302001` = GCP, Reliability, first record
 - `ADR-209001` = Azure, Tools, first record
+- `ADR-404001` = GitHub, Security, first record
+- `ADR-909001` = Cross-Platform, Tools, first record
 
 ## Purpose
 
-The repository is the front door. The wiki is the structured ADR library.
+The repository is the front door and keeps a local copy of the ADR creation runbook. The GitHub wiki is the structured ADR library and the publication target for ADR pages.
