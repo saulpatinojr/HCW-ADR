@@ -1,6 +1,14 @@
 # HCW Architecture Decision Records
 
-This repository is the entry point for the HCW ADR library. The ADR catalog itself is maintained in the GitHub wiki and organized as provider-specific landing pages with discipline-level grouping beneath each provider.
+This repository is the front door for the HCW ADR library. The published ADR catalog is maintained in the GitHub wiki.
+
+## Current Status
+
+- **Total published ADRs:** 56
+- **Azure:** 46
+- **GitHub:** 6
+- **Cross-Platform:** 2
+- **AWS/GCP:** Reserved numbering; pages available as provider placeholders
 
 ## Start Here
 
@@ -9,63 +17,28 @@ This repository is the entry point for the HCW ADR library. The ADR catalog itse
 - [ADR Creation Runbook](https://github.com/saulpatinojr/HCW-ADR/wiki/ADR-Creation-Runbook)
 - [Local ADR Creation Runbook](./ADR-Creation-Runbook.md)
 
-## Provider Landing Pages
+## Provider Libraries
 
-| Provider | Wiki Landing Page | Current State |
+| Provider | Wiki Landing Page | State |
 |---|---|---|
-| Microsoft Azure | [Microsoft Azure](https://github.com/saulpatinojr/HCW-ADR/wiki/Microsoft-Azure) | Active library |
+| Microsoft Azure | [Microsoft Azure](https://github.com/saulpatinojr/HCW-ADR/wiki/Microsoft-Azure) | Active |
+| GitHub | [GitHub](https://github.com/saulpatinojr/HCW-ADR/wiki/GitHub) | Active |
+| Cross-Platform | [Cross-Platform](https://github.com/saulpatinojr/HCW-ADR/wiki/Cross-Platform) | Active |
 | Amazon Web Services | [Amazon Web Services](https://github.com/saulpatinojr/HCW-ADR/wiki/Amazon-Web-Services) | Placeholder |
 | Google Cloud Platform | [Google Cloud Platform](https://github.com/saulpatinojr/HCW-ADR/wiki/Google-Cloud-Platform) | Placeholder |
-| GitHub | [GitHub](https://github.com/saulpatinojr/HCW-ADR/wiki/GitHub) | Active library |
-| Cross-Platform | [Cross-Platform](https://github.com/saulpatinojr/HCW-ADR/wiki/Cross-Platform) | Active library |
 
-## What Is an ADR?
+## ADR ID Standard
 
-An Architecture Decision Record captures a significant technical decision, the context behind it, and the consequences that follow from it. Accepted ADRs are preserved as historical records and superseded by newer ADRs instead of being rewritten in place.
-
-## When ADRs Compete
-
-If two ADRs describe competing directions, do not keep both as if they are equally current.
-
-The resolution process is:
-
-1. Review the competing ADRs against the implemented architecture and current best practices.
-2. Keep the ADR that is still aligned with the target architecture as the active decision.
-3. Mark the stale ADR as `Superseded` rather than deleting it.
-4. Update the newer ADR with an appendix that records:
-   - the timestamp of the update
-   - which prior ADR it improves or replaces
-   - what changed
-   - why the newer direction is now preferred
-5. Update the wiki landing page status if the superseded ADR is listed there.
-
-This keeps the decision trail intact while making the current direction unambiguous.
-
-## Library Structure
-
-ADRs are tiered the same way across the wiki:
-
-1. Provider landing page
-2. Discipline section within that provider
-3. Individual ADR page
-
-Naming follows `ADR-[P][DD][SSS]`:
+Naming format: `ADR-[P][DD][SSS]`
 
 | Segment | Meaning | Values |
 |---|---|---|
-| `P` | Provider or catalog area | `1` = AWS, `2` = Azure, `3` = GCP, `4` = GitHub, `9` = Cross-Platform |
-| `DD` | Discipline | `01` = Operations, `02` = Reliability, `03` = FinOps, `04` = Security, `05` = Networking, `06` = Compute, `07` = Application, `08` = Governance, `09` = Tools |
-| `SSS` | Sequence | Zero-padded sequence within provider and discipline |
+| `P` | Provider/catalog area | `1` AWS, `2` Azure, `3` GCP, `4` GitHub, `9` Cross-Platform |
+| `DD` | Discipline | `01` Ops, `02` Reliability, `03` FinOps, `04` Security, `05` Networking, `06` Compute, `07` Application, `08` Governance, `09` Tools |
+| `SSS` | Sequence | Zero-padded per provider + discipline |
 
-Examples:
+## Publication Model
 
-- `ADR-205001` = Azure, Networking, first record
-- `ADR-104003` = AWS, Security, third record
-- `ADR-302001` = GCP, Reliability, first record
-- `ADR-209001` = Azure, Tools, first record
-- `ADR-404001` = GitHub, Security, first record
-- `ADR-909001` = Cross-Platform, Tools, first record
-
-## Purpose
-
-The repository is the front door and keeps a local copy of the ADR creation runbook. The GitHub wiki is the structured ADR library and the publication target for ADR pages.
+- ADR source and index files are maintained in this repository.
+- Wiki pages are the publication target and authoritative read surface.
+- ADR pages must stay sanitized: environment-agnostic implementation notes and official documentation links in references.
