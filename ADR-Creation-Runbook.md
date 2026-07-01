@@ -41,7 +41,7 @@ Poor ADR subjects:
    Use the naming standard in this runbook. Never reuse an existing ID.
 
 4. **Create the ADR page in the GitHub wiki clone.**
-   Use the required ADR structure. The filename should be the ADR ID, for example `ADR-209001.md`.
+   Use the required ADR structure. The filename should be the ADR ID, for example `ADR-CROSS-001.md`.
 
 5. **Sanitize the content.**
    Remove client names, tenant IDs, subscription IDs, repository names, internal app names, exact secret names, exact workflow names, and exact file paths unless they are public product names or intentionally generic examples.
@@ -65,26 +65,25 @@ Poor ADR subjects:
 ADR IDs follow this pattern:
 
 ```text
-ADR-[P][DD][SSS]
+ADR-<GROUP>-<NNN>
 ```
 
 | Segment | Meaning | Values |
 |---|---|---|
-| `P` | Provider or catalog area | `1` = AWS, `2` = Azure, `3` = GCP, `4` = GitHub, `9` = Cross-Platform |
-| `DD` | Discipline | `01` = Operations, `02` = Reliability, `03` = FinOps, `04` = Security, `05` = Networking, `06` = Compute, `07` = Application, `08` = Governance, `09` = Tools |
-| `SSS` | Sequence | Zero-padded sequence within provider and discipline |
+| `<GROUP>` | Technology or provider group | `AZURE`, `GITHUB`, `CROSS`, `RUNNER`, `PLATFORM`, `AWS`, `GCP` |
+| `<NNN>` | Sequence | Zero-padded sequence within the group |
 
 Examples:
 
-- `ADR-205001` = Azure, Networking, first record.
-- `ADR-209001` = Azure, Tools, first record.
-- `ADR-404001` = GitHub, Security, first record.
-- `ADR-909001` = Cross-Platform, Tools, first record.
+- `ADR-AZURE-016` = sixteenth Azure ADR.
+- `ADR-GITHUB-003` = third GitHub ADR.
+- `ADR-CROSS-002` = second Cross-Platform ADR.
+- `ADR-RUNNER-001` = first runner-architecture ADR.
 
 Rules:
 
 - The ID must match the provider and discipline fields in the ADR.
-- The filename should be the ID only, for example `ADR-404001.md`.
+- The filename should be the ID only, for example `ADR-GITHUB-003.md`.
 - Do not append descriptive slugs to ADR filenames in the shared wiki catalog.
 - Do not reuse IDs after an ADR is superseded. Superseded ADRs remain part of the historical record.
 
@@ -95,18 +94,17 @@ Rules:
 Every ADR must use this structure:
 
 ```markdown
-# ADR-000000: Title
+# ADR-GROUP-001: Title
 
 | Field | Value |
 |-------|-------|
-| **ID** | ADR-000000 |
+| **ID** | ADR-GROUP-001 |
 | **Status** | Proposed / Accepted / Superseded / Deprecated |
 | **Provider** | Microsoft Azure / AWS / GCP / GitHub / Cross-Platform |
 | **Discipline** | Operations / Reliability / FinOps / Security / Networking / Compute / Application / Governance / Tools |
-| **Author** | Name |
+| **Author** | Architecture Working Group |
 | **Date** | YYYY-MM-DD |
-| **Reviewed By** | Pending |
-
+| **Reviewed By** | Architecture Review Board |
 ---
 
 ## Context
@@ -121,17 +119,14 @@ Every ADR must use this structure:
 
 ## Implementation Notes
 
+- Define prerequisites, permissions, and runtime inputs using environment-agnostic terms.
+- Execute automation in staged order with explicit validation gates between stages.
+- Document rollback, recovery, and operational verification steps for repeatable execution.
 ## References
-```
 
-Optional sections:
-
-- `Architecture Diagram`
-- `Required Permissions Reference`
-- `Migration Path`
-- `Revision History`
-
----
+- [Azure Architecture Center](https://learn.microsoft.com/azure/architecture/)
+- [Azure Well-Architected Framework](https://learn.microsoft.com/azure/well-architected/)
+- [Azure deployment and operations guidance](https://learn.microsoft.com/azure/cloud-adoption-framework/ready/)
 
 ## Sanitization Standard
 
